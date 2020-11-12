@@ -166,3 +166,16 @@ li {
     width: 10%;
     padding: 20px;
 }
+
+.prev-contact-chat {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    border-top: 1px solid black;
+}
+
+.right-prev-chat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

@@ -5,27 +5,27 @@ var app = new Vue (
             contacts: [
                 {
                     name: 'Alberto',
-                    avatar: 'https://4.bp.blogspot.com/_fLmqQ3pMUvQ/SVC4zkT7kJI/AAAAAAAABJ0/G9cA3FECwqk/s320/faceyourmanga.jpg'
+                    avatar: 'img/alberto.png'
                 },
                 {
                     name: 'Chiara',
-                    avatar: 'https://4.bp.blogspot.com/_fLmqQ3pMUvQ/SVC4zkT7kJI/AAAAAAAABJ0/G9cA3FECwqk/s320/faceyourmanga.jpg'
+                    avatar: 'img/alberto.png'
+                },
+                {
+                    name: 'Francesca',
+                    avatar: 'img/alberto.png'
+                },
+                {
+                    name: 'Francesco',
+                    avatar: 'img/alberto.png'
+                },
+                {
+                    name: 'Mario',
+                    avatar: 'img/alberto.png'
                 },
                 {
                     name: 'Chiara',
-                    avatar: 'https://4.bp.blogspot.com/_fLmqQ3pMUvQ/SVC4zkT7kJI/AAAAAAAABJ0/G9cA3FECwqk/s320/faceyourmanga.jpg'
-                },
-                {
-                    name: 'Chiara',
-                    avatar: 'https://4.bp.blogspot.com/_fLmqQ3pMUvQ/SVC4zkT7kJI/AAAAAAAABJ0/G9cA3FECwqk/s320/faceyourmanga.jpg'
-                },
-                {
-                    name: 'Chiara',
-                    avatar: 'https://4.bp.blogspot.com/_fLmqQ3pMUvQ/SVC4zkT7kJI/AAAAAAAABJ0/G9cA3FECwqk/s320/faceyourmanga.jpg'
-                },
-                {
-                    name: 'Chiara',
-                    avatar: 'https://4.bp.blogspot.com/_fLmqQ3pMUvQ/SVC4zkT7kJI/AAAAAAAABJ0/G9cA3FECwqk/s320/faceyourmanga.jpg'
+                    avatar: 'img/alberto.png'
                 }
             ]
         }
