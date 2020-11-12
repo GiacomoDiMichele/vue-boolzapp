@@ -71,6 +71,11 @@
     padding: 10px;
 }
 
+.conversations-list {
+    height: 738px;
+    overflow-y: scroll;
+}
+
 .conversation-headerbar {
     width: 100%;
     height: 100px;
@@ -98,7 +103,7 @@
 }
 
 .content-message {
-    padding: 10px;
+    max-width: 300px;
     border-radius: 6px;
     padding: 12px;
     clear: both;
@@ -106,11 +111,50 @@
 
 .answer-computer {
     background-color: white;
+    margin-left: 30px;
     border: 1px solid grey;
     float: left;
 }
 
 .mine-answer {
+    margin-right: 30px;
     background-color: lightgreen;
     float: right;
+}
+
+.messages-single-chat {
+    height: 688px;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.new-message {
+    width: 100%;
+    height: 100px;
+    background-color: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.smiles {
+    width: 10%;
+}
+
+.smiles i {
+    font-size: 2.0em;
+}
+
+.type-text-new-message {
+    width: 70%;
+}
+
+.type-text-new-message input {
+    width: 89%;
+    padding: 20px;
+}
+
+.type-text-new-message button {
+    width: 10%;
+    padding: 20px;
 }
