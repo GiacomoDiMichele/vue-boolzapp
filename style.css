@@ -10,7 +10,7 @@
     float: left;
     background-color: grey;
 }
-.messages-chat {
+.messages-chat-container {
     height: 100vh;
     width: 65%;
     float: left;
@@ -36,7 +36,6 @@
     width: 50%;
     object-fit: cover;
 }
-
 
 .myavatar-right {
     float: left;
@@ -70,4 +69,48 @@
 .search-conversations input {
     width: 85%;
     padding: 10px;
+}
+
+.conversation-headerbar {
+    width: 100%;
+    height: 100px;
+}
+
+.conversation-headerbar-left {
+    float: left;
+    width: 50%;
+    height: 100%;
+    background-color: green;
+}
+
+.conversation-headerbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    float: left;
+    height: 100%;
+    width: 50%;
+    background-color: pink;
+}
+
+.conversation-headerbar-right i {
+    padding: 10px;
+}
+
+.content-message {
+    padding: 10px;
+    border-radius: 6px;
+    padding: 12px;
+    clear: both;
+}
+
+.answer-computer {
+    background-color: white;
+    border: 1px solid grey;
+    float: left;
+}
+
+.mine-answer {
+    background-color: lightgreen;
+    float: right;
 }

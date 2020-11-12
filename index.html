@@ -4,14 +4,15 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-        <title></title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <title>Boolzap</title>
     </head>
     <body>
         <div class="wrapper">
             <div class="contacts">
                 <div class="myavatar-bar">
                     <div class="myavatar-left">
-                        <img src="profile.png" alt="">
+                        <img src="img\profile.png" alt="">
                     </div>
                     <div class="myavatar-right">
                         <i class="fas fa-spinner"></i>
@@ -27,8 +28,21 @@
 
                 </div>
             </div>
-            <div class="messages-chat">
+            <div class="messages-chat-container">
+                <div class="conversation-headerbar">
+                    <div class="conversation-headerbar-left">
 
+                    </div>
+                    <div class="conversation-headerbar-right">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+                <div class="messages-single-chat">
+                    <div class="content-message answer-computer">Ciao come stai?</div>
+                    <div class="content-message mine-answer">Bene grazie tu?</div>
+                    <div class="content-message answer-computer">Io ho il raffreddore</div>
+                </div>
             </div>
         </div>
 
