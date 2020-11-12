@@ -76,7 +76,7 @@ li {
 }
 
 .container-conversations-list {
-    height: 738px;
+    height: 787px;
     overflow-y: scroll;
 }
 
@@ -131,7 +131,7 @@ li {
 }
 
 .messages-single-chat {
-    height: 688px;
+    height: 737px;
     width: 100%;
     overflow-y: scroll;
 }
