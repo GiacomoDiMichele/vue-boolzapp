@@ -26,11 +26,10 @@
                         <input type="search" placeholder="Cerca o inizia una nuova chat" name="" value="">
                     </div>
                     <div class="container-conversations-list">
-                        <ul id="conversations-list">
-                            <li v-for="element in contacts" :key="element.name">
-                                {{ element.name }}
-                            </li>
-                        </ul>
+                        <div v-for="element in contacts" class="">
+                            {{ element.name }}
+                            <img :src="element.avatar" alt="">
+                        </div>
                     </div>
                 </div>
                 <div class="messages-chat-container">

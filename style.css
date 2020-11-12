@@ -75,9 +75,13 @@ li {
     padding: 10px;
 }
 
-.conversations-list {
+.container-conversations-list {
     height: 738px;
     overflow-y: scroll;
+}
+
+#conversations-list li {
+    height: 80px;
 }
 
 .conversation-headerbar {
