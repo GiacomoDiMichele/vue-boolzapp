@@ -8,53 +8,58 @@
         <title>Boolzap</title>
     </head>
     <body>
-        <div class="wrapper">
-            <div class="contacts">
-                <div class="myavatar-bar">
-                    <div class="myavatar-left">
-                        <img src="img\profile.png" alt="">
+        <div id="root">
+            <div class="wrapper">
+                <div class="contacts">
+                    <div class="myavatar-bar">
+                        <div class="myavatar-left">
+                            <img src="img\profile.png" alt="">
+                        </div>
+                        <div class="myavatar-right">
+                            <i class="fas fa-spinner"></i>
+                            <i class="fas fa-comment-alt"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
                     </div>
-                    <div class="myavatar-right">
-                        <i class="fas fa-spinner"></i>
-                        <i class="fas fa-comment-alt"></i>
-                        <i class="fas fa-ellipsis-v"></i>
+                    <div class="search-conversations">
+                        <button type="button" name="button"><i class="fas fa-search"></i></button>
+                        <input type="search" placeholder="Cerca o inizia una nuova chat" name="" value="">
+                    </div>
+                    <div class="container-conversations-list">
+                        <ul id="conversations-list">
+                            <li v-for="element in contacts" :key="element.name">
+                                {{ element.name }}
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="search-conversations">
-                    <button type="button" name="button"><i class="fas fa-search"></i></button>
-                    <input type="search" placeholder="Cerca o inizia una nuova chat" name="" value="">
-                </div>
-                <div class="conversations-list">
+                <div class="messages-chat-container">
+                    <div class="conversation-headerbar">
+                        <div class="conversation-headerbar-left">
 
-                </div>
-            </div>
-            <div class="messages-chat-container">
-                <div class="conversation-headerbar">
-                    <div class="conversation-headerbar-left">
-
+                        </div>
+                        <div class="conversation-headerbar-right">
+                            <i class="fas fa-search"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
                     </div>
-                    <div class="conversation-headerbar-right">
-                        <i class="fas fa-search"></i>
-                        <i class="fas fa-ellipsis-v"></i>
+                    <div class="messages-single-chat">
+                        <div class="content-message answer-computer">Ciao come stai?</div>
+                        <div class="content-message mine-answer">Bene grazie tu?</div>
+                        <div class="content-message answer-computer">Io ho il raffreddore</div>
                     </div>
-                </div>
-                <div class="messages-single-chat">
-                    <div class="content-message answer-computer">Ciao come stai?</div>
-                    <div class="content-message mine-answer">Bene grazie tu?</div>
-                    <div class="content-message answer-computer">Io ho il raffreddore</div>
-                </div>
-                <div class="new-message">
-                    <div class="smiles">
-                        <i class="far fa-smile"></i>
-                    </div>
-                    <div class="type-text-new-message">
-                        <input type="text" name="" placeholder="Scrivi un messaggio..." value="">
-                        <button type="button" name="button"><i class="fas fa-arrow-up"></i></button>
+                    <div class="new-message">
+                        <div class="smiles">
+                            <i class="far fa-smile"></i>
+                        </div>
+                        <div class="type-text-new-message">
+                            <input type="text" name="" placeholder="Scrivi un messaggio..." value="">
+                            <button type="button" name="button"><i class="fas fa-arrow-up"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
         <script src="main.js" charset="utf-8"></script>
     </body>
 </html>
