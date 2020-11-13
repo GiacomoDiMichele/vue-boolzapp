@@ -134,12 +134,16 @@ var app = new Vue (
                             status: 'received'
                         }
                     ]
-                }
-            ]
+                },
+            ],
+            newMessage: '',
+            contactActive: 0,
         },
         methods: {
-            is_sent() {
-                return this.status = 'sent';
+            GetMessageClass(index) {
+                let thisContact = this.contacts[this.contactActive];
+                let messageClass = 'message ' + thisContact.messages[index].status;
+                return messageClass;
             }
         }
     }

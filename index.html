@@ -49,8 +49,8 @@
                         </div>
                     </div>
                     <div class="messages-single-chat">
-                        <div v-for="element in contacts[0].messages" class="">
-                            <p v-if="is_sent()">{{ element.message }}</p>
+                        <div v-for="(element, index) in contacts[contactActive].messages" :class='GetMessageClass[index]'>
+                            <span>{{ element.message }}</span>
                         </div>
                     </div>
                     <div class="new-message">
