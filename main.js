@@ -136,6 +136,11 @@ var app = new Vue (
                     ]
                 }
             ]
+        },
+        methods: {
+            is_sent() {
+                return this.status = 'sent';
+            }
         }
     }
 )

@@ -50,7 +50,7 @@
                     </div>
                     <div class="messages-single-chat">
                         <div v-for="element in contacts[0].messages" class="">
-                            {{ element.message }}
+                            <p v-if="is_sent()">{{ element.message }}</p>
                         </div>
                     </div>
                     <div class="new-message">
