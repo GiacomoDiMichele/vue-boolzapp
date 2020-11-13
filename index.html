@@ -27,11 +27,14 @@
                     </div>
                     <div class="container-conversations-list">
                         <div v-for="element in contacts" class="prev-contact-chat">
-                            <img :src="element.avatar" alt="">
+                            <img class="img-avatar" :src="element.avatar" alt="">
                             <div class="right-prev-chat">
                                 <h4>{{ element.name }}</h4>
                                 <p>non poteva essere altrimenti</p>
                             </div>
+                        </div>
+                        <div class="no-more-conversations">
+                            <h3 id="notice-list-chat">!No more conversations on this whatsapp-profile!</h3>
                         </div>
                     </div>
                 </div>
@@ -46,9 +49,9 @@
                         </div>
                     </div>
                     <div class="messages-single-chat">
-                        <div class="content-message answer-computer">Ciao come stai?</div>
-                        <div class="content-message mine-answer">Bene grazie tu?</div>
-                        <div class="content-message answer-computer">Io ho il raffreddore</div>
+                        <div v-for="element in contacts[0].messages" class="">
+                            {{ element.message }}
+                        </div>
                     </div>
                     <div class="new-message">
                         <div class="smiles">

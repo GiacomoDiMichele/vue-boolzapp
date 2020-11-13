@@ -84,6 +84,31 @@ li {
     height: 80px;
 }
 
+.prev-contact-chat {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.right-prev-chat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-avatar {
+    width: 80px;
+    height: 80px;
+}
+
+#notice-list-chat {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+}
+
 .conversation-headerbar {
     width: 100%;
     height: 100px;
@@ -110,24 +135,29 @@ li {
     padding: 10px;
 }
 
+.messages-right, .messages-left {
+    clear: both;
+}
+
 .content-message {
     max-width: 300px;
     border-radius: 6px;
     padding: 12px;
-    clear: both;
 }
 
-.answer-computer {
+.messages-received {
     background-color: white;
     margin-left: 30px;
     border: 1px solid grey;
     float: left;
+    clear: both;
 }
 
-.mine-answer {
+.messages-sent {
     margin-right: 30px;
     background-color: lightgreen;
     float: right;
+    clear: both;
 }
 
 .messages-single-chat {
@@ -165,17 +195,4 @@ li {
 .type-text-new-message button {
     width: 10%;
     padding: 20px;
-}
-
-.prev-contact-chat {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    border-top: 1px solid black;
-}
-
-.right-prev-chat {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
