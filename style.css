@@ -12,32 +12,35 @@ li {
     height: 100vh;
     width: 35%;
     float: left;
-    background-color: grey;
+    background-color: #FFFFFF;
 }
+
 .messages-chat-container {
     height: 100vh;
     width: 65%;
     float: left;
-    background-color: blue;
+    background-image:url(https://i.pinimg.com/originals/85/70/f6/8570f6339d3189c96e340d47a581d3b8.jpg);
 }
 
 .myavatar-bar {
     width: 100%;
-    height: 100px;
+    height: 70px;
+    background-color: #EAEAEA;
+    border-bottom: 1px solid  #dbd6d2;
+    border-top: 1px solid  #dbd6d2;
 }
 
 .myavatar-left {
     float: left;
     width: 20%;
     height: 100%;
-    background-color: red;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .myavatar-left img {
-    width: 50%;
+    width: 45%;
     object-fit: cover;
 }
 
@@ -45,21 +48,21 @@ li {
     float: left;
     width: 80%;
     height: 100%;
-    background-color: yellow;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
 .myavatar-right i {
-    font-size: 1.7em;
+    font-size: 1.4em;
     padding: 0px 10px;
+    color: #B2B2B4;
 }
 
 .search-conversations {
     width: 100%;
     height: 50px;
-    background-color: black;
+    background-color: #F9F9F9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,16 +71,21 @@ li {
 .search-conversations button {
     width: 10%;
     padding: 10px;
+    border-width: 0;
+    border: 1px solid #F5F5F5;
 }
 
 .search-conversations input {
     width: 85%;
     padding: 10px;
+    border-width: 0;
+    border: 1px solid #F5F5F5;
 }
 
 .container-conversations-list {
-    height: 787px;
+    height: 817px;
     overflow-y: scroll;
+    cursor: pointer;
 }
 
 #conversations-list li {
@@ -88,14 +96,25 @@ li {
     margin-top: 10px;
     margin-bottom: 10px;
     display: flex;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid #F5F5F5;
+    border-bottom: 1px solid #F5F5F5;
+}
+
+.no-more-conversations {
+    font-family: 'Roboto', sans-serif;
+    color: #65727a;
 }
 
 .right-prev-chat {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.right-prev-chat p {
+    font-size: 0.8em;
+    color: lightgrey;
 }
 
 .img-avatar {
@@ -111,14 +130,15 @@ li {
 
 .conversation-headerbar {
     width: 100%;
-    height: 100px;
+    height: 70px;
+    background-color: #EAEAEA;
+    border: 1px solid #dbd6d2;
 }
 
 .conversation-headerbar-left {
     float: left;
     width: 50%;
     height: 100%;
-    background-color: green;
 }
 
 .conversation-headerbar-right {
@@ -128,11 +148,12 @@ li {
     float: left;
     height: 100%;
     width: 50%;
-    background-color: pink;
 }
 
 .conversation-headerbar-right i {
     padding: 10px;
+    color: #B2B2B4;
+    font-size: 1.4em;
 }
 
 .messages-right, .messages-left {
@@ -145,7 +166,7 @@ li {
     padding: 12px;
 }
 
-.messages-received {
+.received {
     background-color: white;
     margin-left: 30px;
     border: 1px solid grey;
@@ -153,7 +174,7 @@ li {
     clear: both;
 }
 
-.messages-sent {
+.sent {
     margin-right: 30px;
     background-color: lightgreen;
     float: right;
@@ -161,7 +182,7 @@ li {
 }
 
 .messages-single-chat {
-    height: 737px;
+    height: 767px;
     width: 100%;
     overflow-y: scroll;
 }
@@ -169,7 +190,7 @@ li {
 .new-message {
     width: 100%;
     height: 100px;
-    background-color: purple;
+    background-color: #F3EEEA;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -181,6 +202,8 @@ li {
 
 .smiles i {
     font-size: 2.0em;
+    color: #65727A;
+    cursor: pointer;
 }
 
 .type-text-new-message {
@@ -190,9 +213,19 @@ li {
 .type-text-new-message input {
     width: 89%;
     padding: 20px;
+    border-width: 0;
+    border: 1px solid #F5F5F5;
 }
 
 .type-text-new-message button {
     width: 10%;
     padding: 20px;
+    border-width: 0;
+    border: 1px solid #F5F5F5;
+    cursor: pointer;
+}
+
+.type-text-new-message button i {
+    color: #65727A;
+    font-size: 1.5em;
 }
