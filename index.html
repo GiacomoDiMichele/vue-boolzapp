@@ -29,7 +29,7 @@
                         <input type="search" placeholder="Cerca o inizia una nuova chat" name="" value="">
                     </div>
                     <div class="container-conversations-list">
-                        <div v-for="element in contacts" class="prev-contact-chat">
+                        <div @click="ChangeContact(index)" v-for="(element, index) in contacts" class="prev-contact-chat">
                             <img class="img-avatar" :src="element.avatar" alt="">
                             <div class="right-prev-chat">
                                 <h4>{{ element.name }}</h4>
@@ -51,8 +51,8 @@
                             <i class="fas fa-ellipsis-v"></i>
                         </div>
                     </div>
-                    <div class="messages-single-chat">
-                        <div v-for="(element, index) in contacts[contactActive].messages" :class='GetMessageClass[index]'>
+                    <div class="container-messages-single-chat">
+                        <div class="messages-single-chat" v-for="(element, index) in contacts[contactActive].messages" :class='GetMessageClass[index]'>
                             <span>{{ element.message }}</span>
                         </div>
                     </div>

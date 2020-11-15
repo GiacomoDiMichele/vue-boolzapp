@@ -181,7 +181,7 @@ li {
     clear: both;
 }
 
-.messages-single-chat {
+.container-messages-single-chat {
     height: 767px;
     width: 100%;
     overflow-y: scroll;

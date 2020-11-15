@@ -42,7 +42,7 @@ var app = new Vue (
                         },
                         {
                             date: '',
-                            message: 'Mi piacerebbe ma devo andare a fare la spesa!',
+                            message: 'Mi piacerebbe ma devo andare a cena con i parenti!',
                             status: 'sent'
                         }
                     ]
@@ -60,12 +60,12 @@ var app = new Vue (
                         {
                             date: '',
                             message: 'meglio non ha più la febbre',
-                            status: 'sent'
+                            status: 'received'
                         },
                         {
                             date: '',
                             message: 'Ottimo domani passo a salutarlo',
-                            status: 'received'
+                            status: 'sent'
                         }
                     ]
                 },
@@ -76,17 +76,17 @@ var app = new Vue (
                     messages: [
                         {
                             date: '',
-                            message: 'Hai portato a spasso il cane?',
+                            message: 'Questa sera passa dal macellaio',
+                            status: 'received'
+                        },
+                        {
+                            date: '',
+                            message: 'non ho soldi dietro',
                             status: 'sent'
                         },
                         {
                             date: '',
-                            message: 'Ricordati di dargli a mangiare',
-                            status: 'sent'
-                        },
-                        {
-                            date: '',
-                            message: 'Tutto fatto!',
+                            message: 'passa dalla nonna e fatti dare 10 euro',
                             status: 'received'
                         }
                     ]
@@ -98,17 +98,17 @@ var app = new Vue (
                     messages: [
                         {
                             date: '',
-                            message: 'Hai portato a spasso il cane?',
+                            message: 'hai studiato inglese?',
+                            status: 'received'
+                        },
+                        {
+                            date: '',
+                            message: 'No sono fuori adesso',
                             status: 'sent'
                         },
                         {
                             date: '',
-                            message: 'Ricordati di dargli a mangiare',
-                            status: 'sent'
-                        },
-                        {
-                            date: '',
-                            message: 'Tutto fatto!',
+                            message: 'studia, domani ti interroga',
                             status: 'received'
                         }
                     ]
@@ -120,17 +120,17 @@ var app = new Vue (
                     messages: [
                         {
                             date: '',
-                            message: 'Hai portato a spasso il cane?',
+                            message: 'Oggi non vengo piu',
                             status: 'sent'
                         },
                         {
                             date: '',
-                            message: 'Ricordati di dargli a mangiare',
+                            message: 'ho da fare',
                             status: 'sent'
                         },
                         {
                             date: '',
-                            message: 'Tutto fatto!',
+                            message: 'ok no problem, avviso marco',
                             status: 'received'
                         }
                     ]
@@ -144,7 +144,11 @@ var app = new Vue (
                 let thisContact = this.contacts[this.contactActive];
                 let messageClass = 'message ' + thisContact.messages[index].status;
                 return messageClass;
+            },
+            ChangeContact(indice_contatto) {
+                this.contactActive = indice_contatto;
             }
+
         }
     }
 )
