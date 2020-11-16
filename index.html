@@ -52,7 +52,7 @@
                         </div>
                     </div>
                     <div class="container-messages-single-chat">
-                        <div class="messages-single-chat" v-for="(element, index) in contacts[contactActive].messages" :class='GetMessageClass[index]'>
+                        <div class="messages-single-chat" v-for="(element, index) in contacts[contactActive].messages" :class='element.status'>
                             <span>{{ element.message }}</span>
                         </div>
                     </div>
