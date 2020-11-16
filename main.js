@@ -148,6 +148,14 @@ var app = new Vue (
                     //assegno al parametro la posizione corrente del contatto, passandolo poi alla funzione
                     this.contactActive = indice_contatto;
                 },
+                //creo una funzione uguale al SendMessage, inserendo i dati e portandoli all'interno del timeout
+                ReceivedMessage() {
+                    let messageReceived = {
+                        message: 'ok',
+                        status: 'received'
+                    }
+                    this.contacts[this.contactActive].messages.push(messageReceived)
+                },
                 //creo una funzione da attivare al click del pulsante 'invia'
                 SendMessage() {
                     //creo una variabile che avrà contenuto dinamico(let) e gli assegno la creazione di un nuovo oggetto
@@ -159,11 +167,8 @@ var app = new Vue (
                     }
                     //prendo l'array corrente pushando il messaggio e lo status come fatto per gli obj precedenti
                     this.contacts[this.contactActive].messages.push(messageWrote)
-
-                    setTimeout(function() {
-                        alert("Messaggio ricevuto, rispondo");
-                    }, 1000);
+                    //imposto il set timeout che avvierà il receivedmessage dopo 1 secondo
+                    setTimeout(this.ReceivedMessage, 1000);
                 },
-                //creo una funzione tramite il click 'invia', la quale farà scattare una timing function con all'interno la risposta del computer
             }
         })
