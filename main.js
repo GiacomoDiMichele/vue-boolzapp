@@ -89,7 +89,7 @@ var app = new Vue (
                             message: 'passa dalla nonna e fatti dare 10 euro',
                             status: 'received'
                         }
-                    ]
+                    ],
                 },
                 {
                     name: 'Mario',
@@ -136,7 +136,9 @@ var app = new Vue (
                     ]
                 },
             ],
-            newMessage: '',
+
+            newStatus:'sent',
+            newMessage:'',
             contactActive: 0,
         },
         methods: {
@@ -147,6 +149,10 @@ var app = new Vue (
             },
             ChangeContact(indice_contatto) {
                 this.contactActive = indice_contatto;
+            },
+            SendMessage() {
+                this.contacts[0].messages.push(this.newMessage)
+                this.contacts[0].messages.push(this.newStatus)
             }
 
         }

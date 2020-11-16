@@ -55,14 +55,17 @@
                         <div class="messages-single-chat" v-for="(element, index) in contacts[contactActive].messages" :class='element.status'>
                             <span>{{ element.message }}</span>
                         </div>
+                        <div :class="newStatus">
+                            {{ newMessage }}
+                        </div>
                     </div>
                     <div class="new-message">
                         <div class="smiles">
                             <i class="far fa-smile"></i>
                         </div>
                         <div class="type-text-new-message">
-                            <input type="text" name="" placeholder="Scrivi un messaggio..." value="">
-                            <button type="button" name="button"><i class="fas fa-arrow-up"></i></button>
+                            <input type="text" v-model="newMessage" name="" placeholder="Scrivi un messaggio..." value="">
+                            <button type="button" @click="SendMessage" name="button"><i class="fas fa-arrow-up"></i></button>
                         </div>
                     </div>
                 </div>
