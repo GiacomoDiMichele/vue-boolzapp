@@ -159,8 +159,13 @@ var app = new Vue (
                 }
                 //prendo l'array corrente pushando il messaggio e lo status come fatto per gli obj precedenti
                 this.contacts[this.contactActive].messages.push(messageWrote)
-            }
+            },
             //creo una funzione tramite il click 'invia', la quale farà scattare una timing function con all'interno la risposta del computer
+            ReceivedMessage() {
+                setTimeout(function() {
+                    alert("Messaggio ricevuto, rispondo");
+                }, 1000);
+            }
         }
     }
 )
