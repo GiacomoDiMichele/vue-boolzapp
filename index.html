@@ -55,9 +55,6 @@
                         <div class="messages-single-chat" v-for="(element, index) in contacts[contactActive].messages" :class='element.status'>
                             <span>{{ element.message }}</span>
                         </div>
-                        <div :class="newStatus">
-                            {{ newMessage }}
-                        </div>
                     </div>
                     <div class="new-message">
                         <div class="smiles">
