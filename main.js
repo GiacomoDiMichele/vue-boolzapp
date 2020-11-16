@@ -142,30 +142,28 @@ var app = new Vue (
         },
 
         methods: {
-            //imposto una funzione che attiverò al click del nuovo contatto
-            //creo un parametro per la posizione del contatto
-            ChangeContact(indice_contatto) {
-                //assegno al parametro la posizione corrente del contatto, passandolo poi alla funzione
-                this.contactActive = indice_contatto;
-            },
-            //creo una funzione da attivare al click del pulsante 'invia'
-            SendMessage() {
-                //creo una variabile che avrà contenuto dinamico(let) e gli assegno la creazione di un nuovo oggetto
-                let messageWrote = {
-                    //nella chiave message passo il valore di newMessage modificato con il v-model dell'input
-                    message: this.newMessage,
-                    //dato che i messaggi saranno inviati dall'utente li imposto per la parte sinistra assegnando status: sent
-                    status: 'sent',
-                }
-                //prendo l'array corrente pushando il messaggio e lo status come fatto per gli obj precedenti
-                this.contacts[this.contactActive].messages.push(messageWrote)
-            },
-            //creo una funzione tramite il click 'invia', la quale farà scattare una timing function con all'interno la risposta del computer
-            ReceivedMessage() {
-                setTimeout(function() {
-                    alert("Messaggio ricevuto, rispondo");
-                }, 1000);
+                //imposto una funzione che attiverò al click del nuovo contatto
+                //creo un parametro per la posizione del contatto
+                ChangeContact(indice_contatto) {
+                    //assegno al parametro la posizione corrente del contatto, passandolo poi alla funzione
+                    this.contactActive = indice_contatto;
+                },
+                //creo una funzione da attivare al click del pulsante 'invia'
+                SendMessage() {
+                    //creo una variabile che avrà contenuto dinamico(let) e gli assegno la creazione di un nuovo oggetto
+                    let messageWrote = {
+                        //nella chiave message passo il valore di newMessage modificato con il v-model dell'input
+                        message: this.newMessage,
+                        //dato che i messaggi saranno inviati dall'utente li imposto per la parte sinistra assegnando status: sent
+                        status: 'sent',
+                    }
+                    //prendo l'array corrente pushando il messaggio e lo status come fatto per gli obj precedenti
+                    this.contacts[this.contactActive].messages.push(messageWrote)
+
+                    setTimeout(function() {
+                        alert("Messaggio ricevuto, rispondo");
+                    }, 1000);
+                },
+                //creo una funzione tramite il click 'invia', la quale farà scattare una timing function con all'interno la risposta del computer
             }
-        }
-    }
-)
+        })
