@@ -176,11 +176,11 @@ var app = new Vue (
 
                 SearchContact() {
                     this.contacts.forEach((element, index) => {
-                        if (element[index].name.includes(this.newResearch)) {
-                            this.visible = true;
+                        if (element.name.includes(this.newResearch)) {
+                            element.visible = true;
                         }
                         else {
-                            this.visible = false;
+                            element.visible = false;
                         }
                     });
                 }
