@@ -139,6 +139,7 @@ var app = new Vue (
             ],
             //imposto un valore di partenza per stabilire il contatto attivo da far scorrere nel v-for
             contactActive: 0,
+            newResearch: ''
         },
 
         methods: {
@@ -167,8 +168,19 @@ var app = new Vue (
                     }
                     //prendo l'array corrente pushando il messaggio e lo status come fatto per gli obj precedenti
                     this.contacts[this.contactActive].messages.push(messageWrote)
+                    //pulisco l'input
+                    this.newMessage = ''
                     //imposto il set timeout che avvierà il receivedmessage dopo 1 secondo
                     setTimeout(this.ReceivedMessage, 1000);
                 },
+
+                SearchContact() {
+                    if (this.contacts[this.contactActive].name.includes(this.newResearch)) {
+                        this.visible = true
+                    }
+                    else {
+                        this.visible = false
+                    }
+                }
             }
         })

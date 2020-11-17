@@ -25,11 +25,11 @@
                         </div>
                     </div>
                     <div class="search-conversations">
-                        <button type="button" name="button"><i class="fas fa-search"></i></button>
-                        <input type="search" placeholder="Cerca o inizia una nuova chat" name="" value="">
+                        <button type="button" @click="SearchContact" name="button"><i class="fas fa-search"></i></button>
+                        <input type="search" v-model="newResearch" placeholder="Cerca o inizia una nuova chat" name="" value="">
                     </div>
                     <div class="container-conversations-list">
-                        <div @click="ChangeContact(index)" v-for="(element, index) in contacts" class="prev-contact-chat">
+                        <div @click="ChangeContact(index)" v-if="(contacts[contactActive].visible = true) ? 'active' : '' " v-for="(element, index) in contacts" class="prev-contact-chat">
                             <img class="img-avatar" :src="element.avatar" alt="">
                             <div class="right-prev-chat">
                                 <h4>{{ element.name }}</h4>
