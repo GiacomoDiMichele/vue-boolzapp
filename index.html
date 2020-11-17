@@ -29,7 +29,7 @@
                         <input type="search" v-model="newResearch" placeholder="Cerca o inizia una nuova chat" name="" value="">
                     </div>
                     <div class="container-conversations-list">
-                        <div @click="ChangeContact(index)" v-if="(contacts[contactActive].visible = true) ? 'active' : '' " v-for="(element, index) in contacts" class="prev-contact-chat">
+                        <div @click="ChangeContact(index)" v-if="contacts[contactActive].visible = true" v-for="(element, index) in contacts" class="prev-contact-chat">
                             <img class="img-avatar" :src="element.avatar" alt="">
                             <div class="right-prev-chat">
                                 <h4>{{ element.name }}</h4>
