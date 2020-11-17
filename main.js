@@ -155,7 +155,7 @@ var app = new Vue (
                         message: 'ok',
                         status: 'received'
                     }
-                    this.contacts[this.contactActive].messages.push(messageReceived)
+                    this.contacts[this.contactActive].messages.push(messageReceived);
                 },
                 //creo una funzione da attivare al click del pulsante 'invia'
                 SendMessage() {
@@ -167,20 +167,22 @@ var app = new Vue (
                         status: 'sent',
                     }
                     //prendo l'array corrente pushando il messaggio e lo status come fatto per gli obj precedenti
-                    this.contacts[this.contactActive].messages.push(messageWrote)
+                    this.contacts[this.contactActive].messages.push(messageWrote);
                     //pulisco l'input
-                    this.newMessage = ''
+                    this.newMessage = '';
                     //imposto il set timeout che avvierà il receivedmessage dopo 1 secondo
                     setTimeout(this.ReceivedMessage, 1000);
                 },
 
                 SearchContact() {
-                    if (this.contacts[this.contactActive].name.includes(this.newResearch)) {
-                        this.visible = true
-                    }
-                    else {
-                        this.visible = false
-                    }
+                    this.contacts.forEach((element, index) => {
+                        if (element[index].name.includes(this.newResearch)) {
+                            this.visible = true;
+                        }
+                        else {
+                            this.visible = false;
+                        }
+                    });
                 }
             }
         })
